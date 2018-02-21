@@ -1,3 +1,4 @@
+all: install test
 install:
 	go get ./...
 test:
