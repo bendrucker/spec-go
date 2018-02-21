@@ -1,17 +1,17 @@
 package spec
 
-func add(a, b int) int {
+func Add(a, b int) int {
   return a + b
 }
 
-func subtract(a, b int) int {
+func Subtract(a, b int) int {
   return a - b
 }
 
-func multiply(a, b int) int {
+func Multiply(a, b int) int {
   return a * b
 }
 
-func divide(a, b int) int {
+func Divide(a, b int) int {
   return a / b
 }
