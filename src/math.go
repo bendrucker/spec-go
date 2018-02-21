@@ -1,4 +1,4 @@
-package math
+package spec
 
 func add(a, b int) int {
   return a + b
