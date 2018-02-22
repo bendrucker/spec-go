@@ -1,6 +1,5 @@
 package spec
 
-
 func pong(channel chan string) {
   message := <-channel
   if message == "ping" {
