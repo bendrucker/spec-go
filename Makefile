@@ -1,5 +1,6 @@
 all: install test
 install:
+	go get github.com/apg/patter
 	go get -t ./...
 test:
-	cd src/ && go test
+	go test -v ./... | patter
