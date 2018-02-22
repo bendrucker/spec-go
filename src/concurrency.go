@@ -1,5 +1,7 @@
 package spec
 
+import "time"
+
 func pong(channel chan string) {
   message := <-channel
   if message == "ping" {
@@ -14,4 +16,19 @@ func PingPongChannel() string {
   channel <- "ping"
 
   return <-channel
+}
+
+func BlockChannel() string {
+	string := ""
+	done := make(chan bool)
+
+	work := func(done chan bool) {
+		time.Sleep(1)
+		string = "done"
+		done <- true
+	}
+
+	go work(done)
+	<-done
+	return string
 }
