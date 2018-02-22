@@ -19,3 +19,9 @@ func TestCreateIncrementerClosure(t *testing.T) {
 
   assert.Equal(t, CreateIncrementerClosure()(), 1)
 }
+
+func TestRecursiveFibonacci(t *testing.T) {
+  assert.Equal(t, Fibonacci(0), 0)
+  assert.Equal(t, Fibonacci(1), 1)
+  assert.Equal(t, Fibonacci(10), 55)
+}
