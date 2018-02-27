@@ -12,3 +12,7 @@ func TestPingPongChannel(t *testing.T) {
 func TestBlockChannel(t *testing.T) {
 	assert.Equal(t, BlockChannel(), "done") 
 }
+
+func TestDefer(t *testing.T) {
+  assert.Equal(t, DeferredIncrement(), 0)
+}

@@ -32,3 +32,13 @@ func BlockChannel() string {
 	<-done
 	return string
 }
+
+func DeferredIncrement() int {
+  value := 0
+  increment := func () {
+    value++
+  }
+
+  defer increment()
+  return value
+}
