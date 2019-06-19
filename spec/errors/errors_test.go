@@ -1,4 +1,4 @@
-package spec
+package errors
 
 import (
 	"github.com/stretchr/testify/assert"

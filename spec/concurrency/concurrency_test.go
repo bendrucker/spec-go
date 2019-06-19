@@ -1,4 +1,4 @@
-package spec
+package concurrency
 
 import (
 	"github.com/stretchr/testify/assert"

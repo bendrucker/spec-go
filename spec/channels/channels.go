@@ -1,4 +1,4 @@
-package spec
+package channels
 
 func BufferedChannel() chan string {
 	channel := make(chan string, 2)

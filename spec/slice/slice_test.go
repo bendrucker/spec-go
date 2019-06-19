@@ -1,4 +1,4 @@
-package spec
+package slice
 
 import (
 	"github.com/stretchr/testify/assert"

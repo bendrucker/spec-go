@@ -1,4 +1,4 @@
-package spec
+package timers
 
 import (
 	"github.com/stretchr/testify/assert"

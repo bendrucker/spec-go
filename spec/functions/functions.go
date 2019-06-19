@@ -1,4 +1,4 @@
-package spec
+package functions
 
 func ReturnMultiple() (string, string) {
 	return "foo", "bar"
