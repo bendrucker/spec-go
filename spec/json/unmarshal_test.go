@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestUnmarshallKvJson(t *testing.T) {
+func TestUnmarshalKvJson(t *testing.T) {
 	encoded := []byte(`
 		{"message": "Hello, world!", "i": 1}
 	`)
