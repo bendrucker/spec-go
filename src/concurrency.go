@@ -3,19 +3,19 @@ package spec
 import "time"
 
 func pong(channel chan string) {
-  message := <-channel
-  if message == "ping" {
-    channel <- "pong"
-  }
+	message := <-channel
+	if message == "ping" {
+		channel <- "pong"
+	}
 }
 
 func PingPongChannel() string {
-  channel := make(chan string)
+	channel := make(chan string)
 
-  go pong(channel)
-  channel <- "ping"
+	go pong(channel)
+	channel <- "ping"
 
-  return <-channel
+	return <-channel
 }
 
 func BlockChannel() string {
@@ -34,11 +34,11 @@ func BlockChannel() string {
 }
 
 func DeferredIncrement() int {
-  value := 0
-  increment := func () {
-    value++
-  }
+	value := 0
+	increment := func() {
+		value++
+	}
 
-  defer increment()
-  return value
+	defer increment()
+	return value
 }

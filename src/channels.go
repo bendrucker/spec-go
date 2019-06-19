@@ -1,10 +1,10 @@
 package spec
 
 func BufferedChannel() chan string {
-  channel := make(chan string, 2)
+	channel := make(chan string, 2)
 
-  channel <- "hello"
-  channel <- "world"
+	channel <- "hello"
+	channel <- "world"
 
-  return channel
+	return channel
 }

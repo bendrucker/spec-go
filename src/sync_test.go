@@ -1,10 +1,10 @@
 package spec
 
 import (
-  "testing"
-  "github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestOnceIncrement(t *testing.T) {
-  assert.Equal(t, OnceIncrement(0), 1)
+	assert.Equal(t, OnceIncrement(0), 1)
 }

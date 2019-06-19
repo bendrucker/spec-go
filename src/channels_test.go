@@ -1,13 +1,13 @@
 package spec
 
 import (
-  "testing"
-  "github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestBufferedChannel(t *testing.T) {
-  channel := BufferedChannel()
+	channel := BufferedChannel()
 
-  assert.Equal(t, <-channel, "hello")
-  assert.Equal(t, <-channel, "world") 
+	assert.Equal(t, <-channel, "hello")
+	assert.Equal(t, <-channel, "world")
 }

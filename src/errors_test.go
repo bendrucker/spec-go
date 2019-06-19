@@ -1,14 +1,14 @@
 package spec
 
 import (
-  "testing"
-  "github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestPanic(t *testing.T) {
-  fn := func () {
-    CreatePanic("boom")
-  }
+	fn := func() {
+		CreatePanic("boom")
+	}
 
-  assert.PanicsWithValue(t, "boom", fn)
+	assert.PanicsWithValue(t, "boom", fn)
 }
