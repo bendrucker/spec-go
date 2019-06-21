@@ -4,7 +4,6 @@ directory=spec/$(name)
 pkg="package $(name)"
 add:
 	mkdir $(directory)
-	echo $(pkg) > spec/$(name)/$(name).go
 	echo $(pkg) > spec/$(name)/$(name)_test.go
 install:
 	go get github.com/apg/patter
