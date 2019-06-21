@@ -1,13 +1,14 @@
 package errors
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestPanic(t *testing.T) {
 	fn := func() {
-		CreatePanic("boom")
+		panic("boom")
 	}
 
 	assert.PanicsWithValue(t, "boom", fn)
