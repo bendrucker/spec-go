@@ -29,3 +29,19 @@ func TestBufferedChannel(t *testing.T) {
 	assert.Equal(t, <-c, "hello")
 	assert.Equal(t, <-c, "world")
 }
+
+func TestChannelBlockingReceive(t *testing.T) {
+	i := 0
+	fn := func(done chan bool) {
+		*&i = 1
+		done <- true
+	}
+
+	done := make(chan bool, 1)
+
+	go fn(done)
+	assert.Equal(t, 0, i)
+
+	<-done
+	assert.Equal(t, 1, i)
+}
