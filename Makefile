@@ -9,7 +9,7 @@ install: export GO111MODULE = on
 install:
 	go get github.com/apg/patter
 	go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.17.1
-	go get -t ./...
+	go get ./...
 lint:
 	golangci-lint run --enable-all
 test:
