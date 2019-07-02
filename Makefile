@@ -12,4 +12,5 @@ install:
 lint:
 	golangci-lint run --enable-all
 test:
+	export GO111MODULE = on
 	go test -v ./... | patter
