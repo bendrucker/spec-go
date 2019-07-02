@@ -1,4 +1,4 @@
-all: install test
+all: install lint test
 
 directory=spec/$(name)
 pkg="package $(name)"
