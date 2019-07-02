@@ -24,6 +24,7 @@ func TestHttpHead(t *testing.T) {
 		return
 	}
 
+	defer resp.Body.Close()
 	assert.Equal(t, 200, resp.StatusCode)
 }
 
@@ -41,6 +42,7 @@ func TestHttptestMux(t *testing.T) {
 		return
 	}
 
+	defer resp.Body.Close()
 	assert.Equal(t, 200, resp.StatusCode)
 }
 
@@ -59,5 +61,6 @@ func TestHttptestStatus(t *testing.T) {
 		return
 	}
 
+	defer resp.Body.Close()
 	assert.Equal(t, 404, resp.StatusCode)
 }

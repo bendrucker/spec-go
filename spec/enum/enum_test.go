@@ -16,6 +16,7 @@ const (
 	Destroy
 )
 
+// nolint:gochecknoglobals
 var names = []string{"create", "read", "update", "destroy"}
 
 func (a Action) String() string {

@@ -12,7 +12,7 @@ func CreateIncrementerClosure() func() int {
 	}
 }
 
-var initialTerms = []int{0, 1}
+var initialTerms = []int{0, 1} // nolint:gochecknoglobals
 
 func Fibonacci(n int) int {
 	if n+1 <= len(initialTerms) {
