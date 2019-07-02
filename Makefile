@@ -5,6 +5,7 @@ pkg="package $(name)"
 add:
 	mkdir $(directory)
 	echo $(pkg) > spec/$(name)/$(name)_test.go
+install: export GO111MODULE = on
 install:
 	go get github.com/apg/patter
 	go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.17.1
@@ -12,5 +13,4 @@ install:
 lint:
 	golangci-lint run --enable-all
 test:
-	export GO111MODULE = on
 	go test -v ./... | patter
