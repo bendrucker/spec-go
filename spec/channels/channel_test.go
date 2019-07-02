@@ -33,7 +33,7 @@ func TestBufferedChannel(t *testing.T) {
 func TestChannelBlockingReceive(t *testing.T) {
 	i := 0
 	fn := func(done chan bool) {
-		*&i = 1
+		i = 1
 		done <- true
 	}
 

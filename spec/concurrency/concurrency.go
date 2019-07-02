@@ -23,7 +23,7 @@ func BlockChannel() string {
 	done := make(chan bool)
 
 	work := func(done chan bool) {
-		time.Sleep(1)
+		time.Sleep(time.Nanosecond)
 		string = "done"
 		done <- true
 	}

@@ -23,6 +23,8 @@ func (a Action) String() string {
 }
 
 func TestEnum(t *testing.T) {
-	action := Create
-	assert.Equal(t, "create", fmt.Sprint(action))
+	assert.Equal(t, "create", fmt.Sprint(Create))
+	assert.Equal(t, "read", fmt.Sprint(Read))
+	assert.Equal(t, "update", fmt.Sprint(Update))
+	assert.Equal(t, "destroy", fmt.Sprint(Destroy))
 }

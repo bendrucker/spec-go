@@ -13,7 +13,7 @@ func TestUnmarshalMapInterface(t *testing.T) {
 	`)
 
 	var decoded map[string]interface{}
-	json.Unmarshal(encoded, &decoded)
+	_ = json.Unmarshal(encoded, &decoded)
 
 	assert.Equal(t, "Hello, world!", decoded["message"].(string))
 	assert.Equal(t, 1, int(decoded["i"].(float64)))
@@ -29,7 +29,7 @@ func TestUnmarshallStruct(t *testing.T) {
 	`)
 
 	decoded := event{}
-	json.Unmarshal(encoded, &decoded)
+	_ = json.Unmarshal(encoded, &decoded)
 
 	assert.Equal(t, "Hello, world!", decoded.Message)
 	assert.Equal(t, 1, decoded.Index)
