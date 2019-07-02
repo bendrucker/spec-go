@@ -2,3 +2,6 @@ language: go
 sudo: false
 go:
   - '1.12'
+script:
+  - make lint
+  - make test
