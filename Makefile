@@ -11,6 +11,6 @@ install:
 	go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.17.1
 	go get ./...
 lint:
-	golangci-lint run --enable-all
+	golangci-lint run --enable-all ./...
 test:
 	go test -v ./... | patter
